@@ -1,0 +1,104 @@
+{{ define "main" }}
+<main class="post pt-3">
+
+    <div class="row align-items-center justify-content-center">
+        <div class="col-xl-10 col-lg-10 col-md-10 col-12 pt-4">
+            <h1 class="post-title" id="getting-started">Getting started</h1>
+            <p class="contact">We are making Icarus usable for everyone.</p>
+            <p>The Icarus style guide is based on <a class="underline" href="https://getbootstrap.com/" target="_blank"
+                    rel="noopener noreferrer" title="Bootstrap">Bootstrap</a>, an open-source toolkit for developing
+                with HTML, CSS,
+                and JS. We are currently on <a class="underline"
+                    href="https://getbootstrap.com/docs/5.2/getting-started/introduction/" target="_blank"
+                    rel="noopener noreferrer" title="Bootstrap Introduction">v5.2.0</a>.
+            </p>
+            <p>To improve the Icarus style guide, you can clone the repo and modify the content.</p>
+            <p>Bootstrap contains a few JavaScript libraries for extra interaction with the DOM. We use these libraries
+                but
+                do not add extra JavaScript, so that only few elements are affected if you disable JavaScript.</p>
+            <p>This style guide has been built using <a class="underline" target="_blank" rel="noopener noreferrer"
+                    title="Hugo" href="https://gohugo.io/">Hugo</a>. Hugo is one of the most popular open-source static
+                site
+                generators.
+                You can build this yourself by <a class="underline" target="_blank" rel="noopener noreferrer"
+                    title="Hugo installation" href="https://gohugo.io/getting-started/installing/"> installing Hugo</a>.
+            </p>
+            <h2 class="post-title mt-5 mb-3" id="reuse-in-a-project">Reuse in a project</h2>
+
+                <p>The components used in the Icarus Style Guide are created with portability in mind. This means they
+                    can be
+                    reused elsewhere without having to reinvent the wheel.</p>
+                <p>The easiest way to do this is to download the scss style (components.scss) and import it in your
+                    project
+                    with bootstrap included.</p>
+                <p>If you want to use SASS you can download the complete archive for the styleguide. <a
+                        class="underline" target="_blank" rel="noopener noreferrer" title="SASS"
+                        href="https://sass-lang.com/">SASS</a> is a CSS
+                    extension The scss folder under assets contains all the sass files. Since we use Bootstrap, we only
+                    add
+                    a few styles without modifying bootstrap core or defining new elements whenever possible.</p>
+
+                <div class="py-3">
+                    <h6>Use the Icarus Style Guide</h6>
+                    <p class="mb-2">This package includes .scss files</p>
+                    <a class="btn underline p-0" title="Icarus Repo"
+                        href="https://github.com/uracreative/icarus-styleguide/tree/master/assets" target="_blank"
+                        rel="noopener noreferrer">Visit
+                        Repo</a>
+                </div>
+
+                <h2 class="post-title mt-5 mb-3" id="contribute">Contributing</h2>
+
+                    <p>If you an interested in contributing to our design system, the first step is ensuring that an
+                        issue exists in our issue tracker. There are many applications that an issue can have,
+                        including:</p>
+
+                    <ul>
+                        <li>Submitting feature proposals</li>
+                        <li>Asking questions</li>
+                        <li>Reporting bugs and malfunctions</li>
+                        <li>Obtaining support</li>
+                        <li>Enhancing code implementations</li>
+                    </ul>
+
+                    <p>If you were unable to find a related issue in our issue tracker, begin by creating a new one.
+                        Creating an issue for each change allows us to easily track all proposals in one place. For
+                        changes that affect visual designs or user experiences, it can be helpful to include a mockup.
+                    </p>
+
+                    <h3>UX proposals</h3>
+
+                    <p>If your proposal involves a new guideline or UX paradigm, ping a UX reviewer or maintainer to
+                        review and provide feedback.</p>
+
+                    <h3>Frontend proposals</h3>
+
+                    <p class="mb-5">If your proposal involves a change to the frontend implementation, ping a frontend
+                        reviewer or maintainer to review and provide feedback.</p>
+
+                    <h2 class="post-title">Contribute a merge request</h2>
+
+                    <p>To make changes within our Design System, follow these instructions:</p>
+
+                    <ol>
+                        <li>Choose an issue to work on. If one does not exist, please review the contribution guidelines
+                            regarding creating a new one. This opens the conversation and allows feedback to happen
+                            early, preventing risks such as duplicated or unnecessary work. It can be helpful to comment
+                            in the issue to verify that no one is working on it and that the issue is still relevant.
+                        </li>
+                        <li>Fork this project.</li>
+                        <li>Make changes reflecting the issue you've chosen to work on.</li>
+                        <li>Create a merge request. The earlier you open a merge request, the sooner you can get
+                            feedback. You can mark it as a Work in Progress to signal that you're not done yet.</li>
+                        <li>Get your merge request approved. If your changes involved a new guideline or UX paradigm,
+                            then ping a UX reviewer or maintainer to approve your changes. If your changes involve an
+                            update to frontend implementation, ping a frontend reviewer or maintainer to approve. Some
+                            merge requests will require both a UX and frontend approver.</li>
+                        <li>Get your changes merged! After the necessary approvals have been added, a UX or frontend
+                            maintainer can then merge your merge request. 🙌</li>
+                    </ol>
+        </div>
+
+    </div>
+</main>
+{{ end }}

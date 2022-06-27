@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body>
+    <a class="screen-reader-text" href="#content">Skip to content</a>
+
+    <div id="content" class="container-fluid full-screen">
+        <div class="row h-100">
+            <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-5 col-12 px-0 background-blue-700">
+                {{ partial "sidebar.html" . }}
+            </div>
+            <div class="col-xxl-10 col-xl-9 col-lg-8 col-md-7 col-12">
+                {{ block "main" . }}{{ end }}
+                {{ block "footer" . }}
+                {{ partial "footer.html" . }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

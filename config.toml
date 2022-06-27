@@ -1,0 +1,114 @@
+baseURL = "https://fightcensorship.tech/"
+title = "Icarus Project - Style Guide"
+
+defaultContentLanguage = "en"
+languageCode = "en-us"
+
+rssLimit  = 300
+copyright = "Some rights reserved. Unless otherwise noted, content on this page is under a Creative Commons license."
+
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+
+buildDrafts  = false
+buildFuture  = false
+buildExpored = false
+canonifyURLs = true
+
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+enableMissingTranslationPlaceholders = true
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = true
+
+pluralizeListTitles = false
+paginate = 8
+
+[permalinks]
+  blog = "/blog/:filename/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+  author   = "authors"
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  # Metadata mostly used in document's head
+  description = ""
+  keywords = "security"
+  images = [""]
+
+  # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  #gitUrl = "https://github.com/XXX/YYY/commit/"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
+  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
+  customCSS = []
+  customJS  = []
+
+  justifyContent = false
+  contentTypeName = "blog"
+
+  # Colors for favicons
+  [params.favicon.color]
+    mask = "#1F78D1"
+    msapplication = "#1F78D1"
+
+[languages]
+  [languages.en]
+    subtitle  = ""
+    weight    = 1
+    copyright = 'Styleguide code licensed under MIT, documents licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" title="License"> Creative Commons license</a>.'
+  [[languages.en.menu.main]]
+    identifier = "getting-started"
+    name       = "Getting Started"
+    url        = "/getting-started/"
+    weight     = "1"
+  [[languages.en.menu.main]]
+    identifier = "brand"
+    name       = "Brand"
+    url        = "/brand/"
+    weight     = "2"
+  [[languages.en.menu.main]]
+    identifier = "design"
+    name       = "Design"
+    url        = "/design/"
+    weight     = "3"
+
+[privacy]
+  [privacy.instagram]
+    disable = false
+    simple = true
+  [privacy.twitter]
+    disable = false
+    enableDNT = true
+    simple = false
+  [privacy.vimeo]
+    disable = false
+    enableDNT = true
+    simple = false
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true
