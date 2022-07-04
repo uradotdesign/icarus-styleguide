@@ -82,20 +82,25 @@ paginate = 8
     weight    = 1
     copyright = 'Styleguide code licensed under MIT, documents licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" title="License"> Creative Commons license</a>.'
   [[languages.en.menu.main]]
-    identifier = "getting-started"
-    name       = "Getting Started"
-    url        = "/getting-started/"
+    identifier = "home"
+    name       = "Home"
+    url        = "/"
     weight     = "1"
   [[languages.en.menu.main]]
-    identifier = "brand"
-    name       = "Brand"
-    url        = "/brand/"
+    identifier = "contributing"
+    name       = "Contributing"
+    url        = "/contributing/"
     weight     = "2"
   [[languages.en.menu.main]]
-    identifier = "design"
-    name       = "Design"
-    url        = "/design/"
+    identifier = "visual-design"
+    name       = "Visual Design"
+    url        = "/visual-design/"
     weight     = "3"
+  [[languages.en.menu.main]]
+    identifier = "tone-of-voice"
+    name       = "Tone of Voice"
+    url        = "/tone-of-voice/"
+    weight     = "4"
 
 [privacy]
   [privacy.instagram]

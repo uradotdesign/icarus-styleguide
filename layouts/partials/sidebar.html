@@ -1,44 +1,12 @@
 <aside class="pt-5 text-center sticky-top">
-    <a class="navbar-brand px-5" href="{{ .Site.BaseURL }}">
-        <img src="/img/logo-white.svg" alt="Icarus Project logo" width="180px">
+    <a class="navbar-brand px-2" href="{{ .Site.BaseURL }}">
+        <img class="img-fluid" src="/img/logo-white.svg" alt="Icarus Project logo">
     </a>
     <ul class="nav flex-column mt-5 text-start">
         {{- $firstUrlElement := print "/" (index (split .RelPermalink "/") 1) "/" -}}
         {{- range .Site.Menus.main -}}
-            <a class="nav-link p-4 text-white {{ if eq ($firstUrlElement|lower) (.URL|lower) }}active{{end}}"
+            <a class="nav-link py-3 px-4 text-white {{ if eq ($firstUrlElement|lower) (.URL|lower) }}active{{end}}"
                 href="{{ .URL | absLangURL }}">{{ .Name }}</a>
         {{ end }}
     </ul>
 </aside>
-
-<div id="navbar-mobile" class="overlay d-block d-lg-none">
-    <div class="container-fluid">
-        <div class="container">
-            <div class="navbar align-items-center justify-content-between">
-                <a class="brand" href="{{ .Site.BaseURL }}">
-                    <img src="/img/logo-white.svg" alt="Icarus Project logo" width="150px">
-                </a>
-                <button type="button" class="closebtn" aria-label="Toggle navigation" onclick="closeNav()"><i
-                        class="fa-solid fa-xmark text-white"></i></button>
-            </div>
-        </div>
-        <div class="overlay-content">
-            <div class="container pt-4">
-                {{- $firstUrlElement := print "/" (index (split .RelPermalink "/") 1) "/" -}}
-                {{- range .Site.Menus.main -}}
-                <a class="text-white {{ if eq ($firstUrlElement|lower) (.URL|lower) }}active{{end}}"
-                    href="{{ .URL | absLangURL }}">{{ .Name }}</a>
-                {{ end }}
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    function openNav() {
-        document.getElementById("navbar-mobile").style.height = "100%";
-    }
-    function closeNav() {
-        document.getElementById("navbar-mobile").style.height = "0%";
-    }
-</script>

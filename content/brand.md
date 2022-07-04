@@ -1,4 +1,0 @@
-+++
-title = "Brand"
-layout = "brand"
-+++

@@ -5,29 +5,30 @@
     {{ partial "head.html" . }}
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body>
     <a class="screen-reader-text" href="#content">Skip to content</a>
 
-    <div id="content" class="content">
-        <main>
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-xl-7 col-lg-7 col-md-12 col-12 py-5">
-                        <article>
+    <div id="content" class="container-fluid full-screen">
+        <div class="row h-100">
+            <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-5 col-12 px-0 background-blue-800">
+                {{ partial "sidebar.html" . }}
+            </div>
+            <div class="col-xxl-10 col-xl-9 col-lg-8 col-md-7 col-12">
+                <main class="post pt-3">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-12 pt-4">
                             <div class="post-content">
                                 {{ .Content }}
-                            </div>
-                        </article>
+                        </div>
                     </div>
-                </div>
+                </main>
+                {{ block "footer" . }}
+                {{ partial "footer.html" . }}
+                {{ end }}
             </div>
-        </main>
+        </div>
     </div>
-
-    {{ block "footer" . }}
-    {{ partial "footer.html" . }}
-    {{ end }}
-
+    
 </body>
 
 </html>

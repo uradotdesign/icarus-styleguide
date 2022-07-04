@@ -5,6 +5,8 @@ html {
   height: 100%;
 }
 
+$border-radius: 5px;
+
 // Body
 
 body {
@@ -33,51 +35,14 @@ nav {
 }
 
 .nav .nav-link {
-  background-color: $blue-700;
+  background-color: $blue-800;
   transition: 0.25s ease-in-out;
 
   &:hover,
   &:focus-visible,
   &.active {
-    background-color: $blue-800;
+    background-color: $blue-900;
   }
-}
-
-.overlay {
-  height: 0;
-  width: 100%;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  background-color: $blue-500;
-  overflow-x: hidden;
-  transition: 0.3s;
-  overflow: auto;
-  overscroll-behavior-y: contain;
-}
-
-.overlay a:not(.brand) {
-  text-decoration: none;
-  font-size: 2.5rem;
-  color: $white;
-  display: block;
-  transition: 0.3s;
-  font-weight: 500;
-}
-
-.overlay a:hover,
-.overlay a:focus {
-  color: $gray-100;
-}
-
-.overlay .closebtn {
-  border: none;
-  outline: none;
-  background: transparent;
-  color: $white;
-  font-size: 1.5rem;
-  padding: 0.25rem 0.75rem;
 }
 
 // Footer
@@ -97,7 +62,6 @@ nav {
 
 // Inner content
 .post-content {
-  h1,
   h2,
   h3,
   h4,
@@ -106,12 +70,20 @@ nav {
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
+
+  & h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: $blue-800;
+    font-weight: bold;
+  }
 }
+
 
 .post .post-title {
   font-size: 3rem;
   font-weight: 300;
-  color: $blue-500;
+  color: $blue-800;
   font-weight: bold;
 }
 
@@ -158,7 +130,7 @@ nav {
 }
 
 .big-text {
-  color: $blue-500;
+  color: $blue-800;
   font-size: 7.5rem;
   font-weight: 700;
 }
@@ -167,11 +139,107 @@ nav {
   color: #686868;
   letter-spacing: .5rem;
   font-size: 2.25rem;
+  overflow: auto;
 }
 
 .weights {
   font-size: 3.5rem;
-  color: $blue-500;
+  color: $blue-800;
+}
+
+// Colors
+
+.colors {
+  &:first-child {
+    .color-overview {
+      border-top-right-radius: $border-radius;
+      border-top-left-radius: $border-radius;
+    }
+  }
+
+  &:last-child {
+    .color-overview {
+      border-bottom-right-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+
+    &:hover {
+      .color-overview {
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  .color-overview {
+    transition: .1s linear;
+    display: flex;
+
+    .variable {
+      flex-grow: 2;
+      color: $gray-900;
+    }
+
+    .hex {
+      transition: .15s linear;
+      opacity: 0;
+      color: $gray-900;
+    }
+  }
+
+  .color-details {
+    display: none;
+    flex-wrap: wrap;
+
+    .color-details--section {
+      flex-grow: 2;
+      flex-basis: 50%;
+
+      .pass { color:#53830E; }
+      .fail { color: #DB3B21; }
+    }
+  }
+
+  // color-overview height + color-details height
+  .color-priority {
+    height: 128px;
+  }
+
+  &:hover {
+    .color-overview {
+      margin: 0 -8px 0 0;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      transition: .15s linear;
+    }
+
+    > .color-details {
+      display: flex;
+    }
+
+  }
+}
+
+.palette {
+  &:hover {
+    .color-priority {
+      height: auto;
+    }
+    .hex {
+      opacity: 1;
+    }
+  }
+}
+
+.inverted {
+  color: $white !important;
+}
+
+.f-small {
+  text-transform: lowercase;
+}
+
+.color-details--section {
+  color: $gray-900;
 }
 
 // Accessibility
