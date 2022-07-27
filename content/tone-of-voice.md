@@ -25,7 +25,7 @@ Don’t:
 
 ## 2. We are politically plugged-in and technically informative.
 
-We assume knowledge at the political, not the technical level. Our community knows censorship is an affront to democracy and fair governance, but may not be familiar with GitHub or mirror sites.
+We assume knowledge at the political, not the technical level. Our community knows ensorship can be used to shut down participation in the space of politics and society, but are not familiar with GitHub and only a handful might understand or know the what a mirror site is and how it can restore the ability to join the discourse.
 
 The Icarus Project is anti-censorship, not anti-government.
 
@@ -87,6 +87,5 @@ Do:
 Don’t:
 - Rename other people’s work to make it look like it’s part of Project Icarus
 - Name anything else Icarus
-- Expand into further branches of Greek Mythology where Daedalus or Icarus were
-not involved
+- Expand into further branches of Greek Mythology where Daedalus or Icarus were not involved
 - Refer to other mythological realms (Roman, Norse, etc.)
